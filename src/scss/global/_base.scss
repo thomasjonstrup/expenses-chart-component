@@ -1,0 +1,99 @@
+@use "fonts";
+@use "colors";
+
+// Reset
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+	font-size: 62.5%; // 1rem = 10px
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+img {
+	width: 100%;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	font-family: fonts.$font-family;
+	background: colors.$cream;
+	color: colors.$dark-brown;
+	font-size: 1.8rem;
+	font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+	font-weight: 700;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-height: 100vh;
+	padding: 0 2rem;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	padding: 3rem 2rem;
+	border-radius: 1rem;
+	margin-bottom: 1rem;
+	background-color: colors.$soft-red;
+
+	&__text {
+		font-size: 1.2rem;
+		font-weight: 400;
+		color: colors.$very-pale-orange;
+	}
+
+	&__price {
+		padding-top: 0.5rem;
+		color: colors.$very-pale-orange;
+	}
+}
+
+.footer {
+	padding-top: 2rem;
+
+	&__attribution {
+		font-size: 1.1rem;
+		text-align: center;
+
+		a {
+			color: hsl(228, 45%, 44%);
+		}
+	}
+}
+
+@keyframes slideUp {
+	from {
+		transform: translate(0, 40px);
+	}
+
+	to {
+		transfrom: translate(0, 0);
+	}
+}
+.content {
+	animation-duration: 1.5s;
+	animation-name: slideUp;
+}

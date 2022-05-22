@@ -1,0 +1,47 @@
+@use "../global/" as *;
+
+:root {
+	--tooltip-margin: 3.1rem;
+	--tooltip-arrow-size: 0.6rem;
+}
+
+.tooltip {
+	position: absolute;
+	border-radius: 4px;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 6px;
+	color: $very-pale-orange;
+	background: $dark-brown;
+	font-size: 14px;
+	font-family: sans-serif;
+	line-height: 1;
+	z-index: 100;
+	white-space: nowrap;
+
+	&--top {
+		top: calc(var(--tooltip-margin) * -1);
+	}
+
+	&--bottom {
+		bottom: calc(var(--tooltip-margin) * -1);
+	}
+
+	&--right {
+		left: calc(100% + var(--tooltip-margin));
+		top: 50%;
+		transform: translateX(0) translateY(-50%);
+	}
+
+	&--left {
+		left: auto;
+		right: calc(100% + var(--tooltip-margin));
+		top: 50%;
+		transform: translateX(0) translateY(-50%);
+	}
+
+	&-wrapper {
+		display: inline-block;
+		position: relative;
+	}
+}

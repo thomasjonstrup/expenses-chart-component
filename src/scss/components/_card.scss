@@ -1,0 +1,35 @@
+@use "../global/" as *;
+
+.card {
+	background-color: $very-pale-orange;
+	padding: 3rem 2rem;
+	max-width: 35rem;
+	border-radius: 1rem;
+
+	&__title {
+		font-size: 2rem;
+	}
+
+	&__body {
+		padding: 2rem 0;
+		border-bottom: 1px solid $cream;
+	}
+
+	&__total {
+		font-size: 1.4rem;
+		font-weight: 700;
+		text-align: right;
+	}
+
+	&__description {
+		font-size: 1.125rem;
+		color: $medium-brown;
+	}
+
+	&__footer {
+		padding-top: 2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+}

@@ -1,0 +1,48 @@
+@use "../global/" as *;
+
+@keyframes expandBar {
+	0% {
+		height: 0%;
+	}
+	100% {
+		height: 100%;
+	}
+}
+
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.chart {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: flex-end;
+	padding: 1rem 0;
+
+	animation: fadeInAnimation ease 3s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+
+	&__amount {
+		width: 2.5rem;
+		background-color: $soft-red;
+		border-radius: 0.3rem;
+		/* 		transition: height 0.6s ease;
+		animation: expandBar 2s ease; */
+
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+
+	&__day {
+		font-size: 1.2rem;
+		color: $medium-brown;
+		padding-top: 1rem;
+	}
+}
