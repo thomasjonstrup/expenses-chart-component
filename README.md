@@ -1,5 +1,7 @@
 # Frontend Mentor - Expenses chart component
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/34c5c818-6d21-4a41-a392-052d6544b480/deploy-status)](https://app.netlify.com/sites/expenses-chart-component/deploys)
+
 ![Design preview for the Expenses chart component coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
